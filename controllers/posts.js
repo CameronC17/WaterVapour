@@ -1,18 +1,27 @@
-var posts = [
+var games = [
 {
   id: 0,
-  title: "Post 1",
-  body: "This is the first post"
+  title: "Spooky Skeltal game",
+  tags: ["Scary", "Fun"],
+  body: "This game will spooky the hell out of you",
+  image: "https://i.ytimg.com/vi/eVrYbKBrI7o/maxresdefault.jpg",
+  comments: []
 },
 {
   id: 1,
-  title: "Post 2",
-  body: "This is the second post"
+  title: "Call of Doody 23",
+  tags: ["Action", "Explosions"],
+  body: "Shoot people and do not feel guilty whatsoever",
+  image: "http://mod.gov.rw/fileadmin/user_upload/Images_for_News/Zigama_Css_G_Assemb2.jpg",
+  comments: []
 },
 {
   id: 2,
-  title: "Post 3",
-  body: "This is the third post"
+  title: "Pineshaft",
+  tags: ["Explore", "Dig"],
+  body: "You have never wanted to dig dirt for hours until now",
+  image: "http://i.imgur.com/8XSrp6G.jpg",
+  comments: []
 }];
 
 
