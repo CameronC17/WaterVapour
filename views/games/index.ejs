@@ -1,10 +1,8 @@
-<h1>Welcome to the water vapour</h1>
+<h1>Welcome to water vapour</h1>
 <% for (var game in games) { %>
 <h1><%= game.title %></h1>
 <p><%= game.body %></p>
-<ul>
-    <% for(var i = 0; i < game.tags.length; ++i ) {%>
-    <li><%= game.tags[i] %></li>
-    <% } %>
-</ul>
+<p><%= game.tags %></p>
+<% } %>
 <img src="<% game.image %>" alt="image of the game">
+
