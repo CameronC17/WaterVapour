@@ -1,6 +1,6 @@
 var games = [
 {
-  id: 0,
+  id: 1,
   title: "Spooky Skeltal game",
   tags: ["Scary", "Fun"],
   body: "This game will spooky the hell out of you",
@@ -8,7 +8,7 @@ var games = [
   comments: []
 },
 {
-  id: 1,
+  id: 2,
   title: "Call of Doody 23",
   tags: ["Action", "Explosions"],
   body: "Shoot people and do not feel guilty whatsoever",
@@ -16,7 +16,7 @@ var games = [
   comments: []
 },
 {
-  id: 2,
+  id: 3,
   title: "Pineshaft",
   tags: ["Explore", "Dig"],
   body: "You have never wanted to dig dirt for hours until now",
