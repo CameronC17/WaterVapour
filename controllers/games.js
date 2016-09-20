@@ -34,7 +34,7 @@ function indexGame(req, res) {
 function showGame(req, res) {
   //res.send("SHOW:" + req.params.id);
   var game = games[req.params.id];
-  res.render("games/show", {title: "Game", game: games});
+  res.render("games/show", {title: "Game", game: game});
 }
 
 // CREATE
