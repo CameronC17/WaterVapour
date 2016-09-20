@@ -2,23 +2,23 @@ var express = require("express");
 
 var router = express.Router();
 
-var postsController = require('../controllers/posts');
+var gamesController = require('../controllers/games');
 
 // add routes here
 
 router.route("/")
-  .get(postsController.index)
-  .post(postsController.create);
+  .get(gamesController.index)
+  .post(gamesController.create);
 
 router.route("/new")
-  .get(postsController.new);
+  .get(gamesController.new);
 
 router.route("/:id/edit")
-  .get(postsController.edit);
+  .get(gamesController.edit);
 
 router.route("/:id")
-  .get(postsController.show)
-  .put(postsController.update)
-  .delete(postsController.delete);
+  .get(gamesController.show)
+  .put(gamesController.update)
+  .delete(gamesController.delete);
 
 module.exports = router;
