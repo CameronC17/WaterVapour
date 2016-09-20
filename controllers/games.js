@@ -26,52 +26,52 @@ var games = [
 
 
 // INDEX
-function indexPost(req, res) {
-  res.render("posts/index", {title: "Posts", posts: posts});
+function indexGame(req, res) {
+  res.render("games/index", {title: "Games", games: games});
 }
 
 // SHOW
-function showPost(req, res) {
+function showGame(req, res) {
   //res.send("SHOW:" + req.params.id);
-  var post = posts[req.params.id];
-  res.render("posts/show", {title: "Post", post: post});
+  var game = games[req.params.id];
+  res.render("games/show", {title: "Game", game: games});
 }
 
 // CREATE
-function createPost(req, res) {
+function createGame(req, res) {
   //get body data (use body parser)
   //posts.push({id : posts.length, title : req.body.title, body : req.body.body})
-  //res.render("posts/show", {title: "Post", post: post});
+  //res.render("posts/show", {title: "Game", game: game});
   res.send("CREATE");
 }
 
 // NEW
-function newPost(req, res) {
-  res.render("posts/new", {title: "Create new"});
+function newGame(req, res) {
+  res.render("games/new", {title: "Create new"});
 }
 
 // UPDATE
-function updatePost(req, res) {
+function updateGame(req, res) {
   res.send("UPDATE:" + req.params.id);
 }
 
 // DELETE
-function deletePost(req, res) {
+function deleteGame(req, res) {
   res.send("DELETE:" + req.params.id);
 }
 
 // EDIT
-function editPost(req, res) {
-  var post = posts[req.params.id];
-  res.render("posts/edit", {title: "Edit", post: post});
+function editGame(req, res) {
+  var game = games[req.params.id];
+  res.render("games/edit", {title: "Edit", game: game});
 }
 
 module.exports = {
-  index: indexPost,
-  show: showPost,
-  new: newPost,
-  create: createPost,
-  edit: editPost,
-  update: updatePost,
-  delete: deletePost
+  index: indexGame,
+  show: showGame,
+  new: newGame,
+  create: createGame,
+  edit: editGame,
+  update: updateGame,
+  delete: deleteGame
 };
