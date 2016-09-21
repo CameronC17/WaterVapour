@@ -1,6 +1,6 @@
 <h1>Welcome to water vapour</h1>
 <% for (var i = 0; i < games.length; i++) { %>
-<h1><a href="/<%= games[i].id %>"><%= games[i].title %></a></h1>
+<h1><a href="games/<%= games[i].id %>"><%= games[i].title %></a></h1>
 <img src="<% games[i].image %>" alt="image of the game">
 <p><%= games[i].body %></p>
 <p><%= games[i].tags %></p>

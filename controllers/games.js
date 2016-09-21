@@ -27,13 +27,13 @@ var games = [
 
 // INDEX
 function indexGame(req, res) {
-  res.render("games/index", {title: "Games", games: games});
+  res.render("games/main", {title: "Games", games: games});
 }
 
 // SHOW
 function showGame(req, res) {
   //res.send("SHOW:" + req.params.id);
-  var game = games[req.params.id - 1];
+  var game = games[req.params.id];
   res.render("games/show", {title: "Game", game: game});
 }
 

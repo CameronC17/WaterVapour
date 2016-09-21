@@ -9,7 +9,7 @@ var usersController = require('../controllers/users');
 
 //home route
 router.route("/")
-  .get(genericController.index);
+  .get(genericController.home);
 
 //games routes
 router.route("/games/")
@@ -43,5 +43,7 @@ router.route("/users/:id")
   .put(usersController.update)
   .delete(usersController.delete);
 
+
+//export the fuction
 
 module.exports = router;

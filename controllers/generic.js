@@ -1,8 +1,8 @@
 // EDIT
-function getHome(req, res) {
-  res.send("HOMEPAGE");
+function showHome(req, res) {
+  res.render("generic/home", {title: "Homepage"});
 }
 
 module.exports = {
-  index: getHome
+  home: showHome
 };

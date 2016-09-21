@@ -24,13 +24,13 @@ var users = [
 
 // INDEX
 function indexUser(req, res) {
-  res.render("users/index", {title: "Users", users: users});
+  res.render("users/main", {title: "Users", users: users});
 }
 
 // SHOW
 function showUser(req, res) {
   //res.send("SHOW:" + req.params.id);
-  var user = users[req.params.id - 1];
+  var user = users[req.params.id];
   res.render("users/show", {title: "Game", user: user});
 }
 
