@@ -1,9 +1,9 @@
-<h1><%= game.title %></h1>
-<img src="<% game.image %>" alt="image of the game">
+<h1><%= user.name %></h1>
+<img src="<% user.image %>" alt="image of the game">
 <p><%= game.body %></p>
 <ul>
     <% for(var i = 0; i < game.tags.length; ++i ) {%>
     <li><%= game.tags[i] %></li>
     <% } %>
 </ul>
-<a href="/<%= game.id + 1 %>/edit">edit</a>
+<a href="/users/<%= user.id + 1 %>/edit">edit</a>
