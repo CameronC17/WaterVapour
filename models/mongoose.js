@@ -1,17 +1,17 @@
 var mongoose = require('mongoose');
 
 var UsersSchema = mongoose.Schema({
-  name: String,
+  name: {type:String , required : true},
   creationDate: Date,
   ownedGames: Array,
   image: String
 });
 var GamesSchema = mongoose.Schema({
-  title: String,
-  tags: [String],
-  body: String,
+  title: {type:String , required : true},
+  tags: {type:Array , required : true},
+  body: {type:String , required : true},
   image: String,
-  comments: []
+  comments: Array
 });
 
 var TestData = function(){
