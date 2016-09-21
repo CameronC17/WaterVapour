@@ -6,6 +6,8 @@ var gamesController = require('../controllers/games');
 
 // add routes here
 
+//jacob
+
 router.route("/")
   .get(gamesController.index)
   .post(gamesController.create);
