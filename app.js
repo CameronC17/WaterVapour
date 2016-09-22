@@ -8,6 +8,8 @@ var routes = require('./config/routes');
 mongoose.connect("mongodb://localhost/waterVapour");
 app.set("view engine", "ejs");
 
+app.use(express.static(__dirname + '/public'));
+
 app.use(layouts);
 
 app.use(routes);
