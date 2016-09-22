@@ -65,9 +65,9 @@ var TestData = function(){
     console.log("Test Data added");
 };
 
-module.exports = 
+module.exports =
 {
     Users : mongoose.model('Users' , UsersSchema),
     Games : mongoose.model('Games' , GamesSchema),
-    TestData : TestData() 
+    TestData : TestData()
 }
