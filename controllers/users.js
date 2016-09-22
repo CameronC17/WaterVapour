@@ -1,25 +1,3 @@
-// var users = [
-// {
-//   id: 0,
-//   name: "CaptainCam",
-//   creationDate: new Date(),
-//   ownedGames: [1],
-//   image: "http://weknowyourdreams.com/image.php?pic=/images/cowboy/cowboy-04.jpg"
-// },
-// {
-//   id: 1,
-//   name: "Nathn123",
-//   creationDate: new Date(),
-//   ownedGames: [2, 3],
-//   image: "http://weknowyourdreams.com/image.php?pic=/images/car/car-04.png"
-// },
-// {
-//   id: 2,
-//   name: "o_r_l_y",
-//   creationDate: new Date(),
-//   ownedGames: [3],
-//   image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Rodney_boat.jpg"
-// }];
 var Users = require('../models/mongoose').Users;
 
 // INDEX

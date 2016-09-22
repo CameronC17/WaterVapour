@@ -1,7 +1,9 @@
 <h1>Welcome to water vapour's Users</h1>
 <% for (var i = 0; i < users.length; i++) { %>
+<div id="<%=user[i].id%>">
 <h1><a href="users/<%= users[i].id %>"><%= users[i].name %></a></h1>
 <img src="<% users[i].image %>" alt="image of the User">
 <p><%= users[i].creationDate %></p>
 <p><%= users[i].ownedGames %></p>
+</div>
 <% } %>
