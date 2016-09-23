@@ -19,10 +19,7 @@ function showUser(req, res) {
 
 // CREATE
 function createUser(req, res) {
-  //get body data (use body parser)
-  //posts.push({id : posts.length, title : req.body.title, body : req.body.body})
-  //res.render("posts/show", {title: "User", User: User});
-    Users.create( req.body , function(err, post){
+    Users.create( req.body, function(err, post){
 
     // check for errors and return 500 if there was a problem
     if(err) return res.status(500).send(err);

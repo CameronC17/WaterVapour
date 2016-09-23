@@ -4,9 +4,10 @@ mongoose.connect("mongodb://localhost/waterVapour");
 
 var UsersSchema = mongoose.Schema({
   name: {type:String , required : true},
-  creationDate: Date,
   ownedGames: Array,
   image: String
+}, {
+  timestamps: true
 });
 var GamesSchema = mongoose.Schema({
   title: {type:String , required : true},

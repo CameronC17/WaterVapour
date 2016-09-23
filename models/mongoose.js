@@ -2,15 +2,16 @@ var mongoose = require('mongoose');
 
 var UsersSchema = mongoose.Schema({
   name: {type:String , required : true},
-  creationDate: Date,
   ownedGames: Array,
-  image: String
+  image: {type:String , required : true}
+}, {
+  timestamps: true
 });
 var GamesSchema = mongoose.Schema({
   title: {type:String , required : true},
   tags: {type:Array , required : true},
   body: {type:String , required : true},
-  image: String,
+  image: {type:String , required : true},
   comments: Array
 });
 
