@@ -15,6 +15,13 @@ mongoose.connect("mongodb://localhost/waterVapour");
 // body parser
 app.use(bodyParser.urlencoded({ extended: false }));
 
+//session
+app.use(session({
+  resave: false,
+  saveUninitialized: true,
+  secret: "iwanttobeinamerica"
+}));
+
 // method override
 app.use(methodOverride(function(req, res){
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {

@@ -10,7 +10,7 @@ function showLogin(req, res) {
 }
 
 function checkLogin(req, res) {
-  User.findOne({email: req.body.email}, function(err, user) {
+  Users.findOne({name: req.body.username}, function(err, user) {
     if (user && user.password == req.body.password) {
         req.session.user = user.id;
         res.redirect("/");
@@ -20,7 +20,7 @@ function checkLogin(req, res) {
       } else {
         console.log("There's no user with those credentials");
       }
-      res.redirect("/sessions/new");
+      res.redirect("/login");
     }
   });
 }
