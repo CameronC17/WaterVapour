@@ -1,6 +1,10 @@
 <nav>
+  <% if(user.id) { %>
+    <p>Welcome, <%= user.name %>.</p>
+    <a href="/games/new">New Game</a>
+  <% } else { %>
   <a href="/">Home</a>
   <a href="/login">Login</a>
-  <a href="/games/new">New Game</a>
   <a href="/users/new">New User</a>
+  <% } %>
 </nav>

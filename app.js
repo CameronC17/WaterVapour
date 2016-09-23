@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 
 
+var User = require('./models/mongoose').Users;
 var routes = require('./config/routes');
 
 mongoose.connect("mongodb://localhost/waterVapour");
@@ -31,6 +32,24 @@ app.use(methodOverride(function(req, res){
     return method
   }
 }));
+
+//load current user
+app.use(function (req, res, next) {
+  if (!req.session.user) {
+    res.locals.user = false;
+    next();
+  } else {
+    User.findById(req.session.user, function(err, user) {
+      if (user) {
+        req.user = user;
+        res.locals.user = user;
+      } else {
+        req.sessions.user = null;
+      }
+      next(err);
+    });
+  }
+});
 
 app.set("view engine", "ejs");
 
