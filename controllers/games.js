@@ -20,8 +20,6 @@ function showGame(req, res) {
 // CREATE
 function createGame(req, res) {
   //get body data (use body parser)
-  //posts.push({id : posts.length, title : req.body.title, body : req.body.body})
-  //res.render("posts/show", {title: "Game", game: game});
     Games.create( req.body , function(err, post){
 
     // check for errors and return 500 if there was a problem
