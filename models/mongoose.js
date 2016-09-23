@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 var UsersSchema = mongoose.Schema({
   name: {type:String , required : true},
+  password: { type:String, required: true },
   ownedGames: Array,
   image: {type:String , required : true}
 }, {

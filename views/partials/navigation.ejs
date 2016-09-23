@@ -1,5 +1,11 @@
 <nav>
+  <% if(user.createdAt) { %>
+    Welcome, <%= user.name %>.
+    <a href="/">Home</a>
+    <a href="/games/new">New Game</a>
+  <% } else { %>
   <a href="/">Home</a>
-  <a href="/games/new">New Game</a>
+  <a href="/login">Login</a>
   <a href="/users/new">New User</a>
+  <% } %>
 </nav>

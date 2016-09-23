@@ -1,4 +1,5 @@
 <h2>So ye want to create a new game, do ye?</h2>
+<% if(user.id) { %>
 <form action="/games" method="post">
   Title:<br>
   <input type="text" name="title"><br>
@@ -10,3 +11,6 @@
   <input type="text" name="image"><br>
   <input type="submit" value="Submit">
 </form>
+<% } else { %>
+  <p>You must be <a href="/login">logged in</a> to create a new game!</p>
+<% } %>
