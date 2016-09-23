@@ -11,6 +11,11 @@ var usersController = require('../controllers/users');
 router.route("/")
   .get(genericController.home);
 
+//login route
+router.route("/login")
+  .get(genericController.login)
+  .post(genericController.checkLogin);
+
 //games routes
 router.route("/games/")
   .get(gamesController.index)

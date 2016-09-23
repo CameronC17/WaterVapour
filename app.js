@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var layouts = require("express-ejs-layouts");
 var mongoose = require('mongoose');
+var session = require('express-session');
 
 
 var routes = require('./config/routes');

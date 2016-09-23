@@ -3,7 +3,8 @@ var mongoose = require('mongoose');
 mongoose.connect("mongodb://localhost/waterVapour");
 
 var UsersSchema = mongoose.Schema({
-  name: {type:String , required : true},
+  name: { type:String , required : true },
+  password: { type: String, required: true },
   ownedGames: Array,
   image: String
 }, {
@@ -19,17 +20,17 @@ var GamesSchema = mongoose.Schema({
 
 mongoose.model('Users' , UsersSchema).create({
     name: "CaptainCam",
-    creationDate: new Date(),
+    password: "password",
     ownedGames: [1],
     image: "http://weknowyourdreams.com/image.php?pic=/images/cowboy/cowboy-04.jpg"
 }, {
     name: "Nathn123",
-    creationDate: new Date(),
+    password: "password",
     ownedGames: [2,3],
     image: "http://weknowyourdreams.com/image.php?pic=/images/car/car-04.png"
 }, {
     name: "o_r_l_y",
-    creationDate: new Date(),
+    password: "password",
     ownedGames: [3],
     image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Rodney_boat.jpg"
 });
