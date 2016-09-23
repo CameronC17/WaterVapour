@@ -1,9 +1,8 @@
-<h1><%= user.name %></h1>
-<img src="<% user.image %>" alt="image of the game">
-<p><%= user.body %></p>
+<h1><%= theuser.name %></h1>
+<img src="<% theuser.image %>" alt="image of the game">
 <ul>
-  <% for(var i = 0; i < user.ownedGames.length; ++i ) {%>
-  <li><%= user.ownedGames[i] %></li>
+  <% for(var i = 0; i < theuser.ownedGames.length; ++i ) {%>
+  <li><%= theuser.ownedGames[i] %></li>
   <% } %>
 </ul>
-<a href="/users/<%= user.id + 1 %>/edit">edit</a>
+<a href="/users/<%= theuser.id %>/edit">edit</a>

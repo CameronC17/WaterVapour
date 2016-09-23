@@ -13,7 +13,13 @@ function indexUser(req, res) {
 function showUser(req, res) {
   //res.send("SHOW:" + req.params.id);
   Users.findById(req.params.id , function(err, user) {
-  res.render("users/show", {title: "User", user: user});
+    var newUser = {
+      name: user.name,
+      image: user.image,
+      ownedGames: user.ownedGames,
+      id: user.id
+  }
+  res.render("users/show", {title: "User", theuser: newUser});
   });
 }
 
@@ -35,7 +41,6 @@ function newUser(req, res) {
     var newUser = {
       title: "",
       tags: [],
-      body: "",
       image: "",
       comments: []
   }
@@ -74,7 +79,6 @@ function deleteUser(req, res) {
 // EDIT
 function editUser(req, res) {
       Users.findById(req.params.id , function(err, User) {
-
       // check for errors or for no object found
       if(!User) return res.status(404).send("Not found");
      if(err) return res.status(500).send(err);

@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({
   resave: false,
   saveUninitialized: true,
-  secret: "iwanttobeinamerica"
+  secret: "cameronisthefreakingbestyouallowemebigtime"
 }));
 
 // method override
